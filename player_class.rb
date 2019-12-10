@@ -1,8 +1,10 @@
-def Player
-  attr_accessor :name
+class Player
+  attr_accessor :name, :lives, :turn
 
   def initialize(name)
     @name = name
-    @current_lives = 3
+    @lives = 3
+    @turn = false
   end
+
 end
