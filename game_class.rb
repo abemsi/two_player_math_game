@@ -36,14 +36,12 @@ class Game
       if @player1.turn
         if answer == @q_answer
           puts "YES! You are correct!"
-          @player1.turn = false
-          @player2.turn = true
         else
           puts "Seriously? No!"
           @player1.lives -= 1
-          @player1.turn = false
-          @player2.turn = true
         end
+        @player1.turn = false
+        @player2.turn = true
       else
         if @player2.turn
           if answer == @q_answer
